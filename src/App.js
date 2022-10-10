@@ -1,6 +1,8 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
+import Blogs from './Components/Blogs/Blogs';
 import Home from './Components/Home/Home';
+import Statistics from './Components/Statistics/Statistics';
 import Main from './Layouts/Main';
 
 function App() {
@@ -16,6 +18,14 @@ function App() {
         {
           path: '/home',
           element: <Home></Home>
+        },
+        {
+          path: '/statistics',
+          element: <Statistics></Statistics>
+        },
+        {
+          path: '/blogs',
+          element: <Blogs></Blogs>
         },
       ]
     }

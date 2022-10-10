@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Header = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    // const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
-        <div className="px-4 py-5 mx-auto shadow-lg sm:max-w-full md:max-w-full lg:max-w-screen-full md:px-24 lg:px-8 bg-gray-200">
-      <div className="relative flex items-center justify-between">
+        <div className="px-4 py-5 mx-auto shadow-md sm:max-w-full md:max-w-full lg:max-w-screen-full md:px-24 lg:px-8 bg-gray-200">
+      <div className="relative md:flex items-center justify-between">
         <NavLink
           to="/"
           aria-label="BlissQuiz"
@@ -31,13 +31,13 @@ const Header = () => {
             BlissQuiz
           </span>
         </NavLink>
-        <ul className="flex items-center hidden space-x-8 lg:flex">
+        <ul className="md:flex items-center lg:flex">
           <li>
             <NavLink
               to="/home"
               aria-label="Home"
               title="Home"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 mr-4 hover:text-slate-400"
             >
               Home
             </NavLink>
@@ -47,7 +47,7 @@ const Header = () => {
               to="/statistics"
               aria-label="Statistics"
               title="Statistics"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 mr-4 hover:text-slate-400"
             >
               Statistics
             </NavLink>
@@ -57,13 +57,13 @@ const Header = () => {
               to="/blogs"
               aria-label="Blogs"
               title="Blogs"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 mr-4 hover:text-slate-400"
             >
               Blogs
             </NavLink>
           </li>
         </ul>
-        <div className="lg:hidden">
+        {/* <div className="lg:hidden">
           <button
             aria-label="Open Menu"
             title="Open Menu"
@@ -86,7 +86,7 @@ const Header = () => {
             </svg>
           </button>
           {isMenuOpen && (
-            <div className="absolute top-0 left-0 w-full">
+            <div className="w-full">
               <div className="p-5 bg-white border rounded shadow-sm">
                 <div className="flex items-center justify-between mb-4">
                   <div>
@@ -169,7 +169,7 @@ const Header = () => {
               </div>
             </div>
           )}
-        </div>
+        </div> */}
       </div>
     </div>
     );
