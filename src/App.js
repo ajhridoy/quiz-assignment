@@ -1,10 +1,28 @@
-import logo from './logo.svg';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
+import Home from './Components/Home/Home';
+import Main from './Layouts/Main';
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Main></Main>,
+      children: [
+        {
+          path: '/',
+          element: <Home></Home>
+        },
+        {
+          path: '/home',
+          element: <Home></Home>
+        },
+      ]
+    }
+  ]);
   return (
     <div className="App">
-      <h1>this is assignment 9</h1>
+      <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }
