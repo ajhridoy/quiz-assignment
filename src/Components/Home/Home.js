@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
+import Quiz from '../Quiz/Quiz';
 
 const Home = () => {
-        
+    const qiuzes = useLoaderData() 
+    console.log(qiuzes);
     return (
         <div>
+            <div>
             <div className="relative flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0 mt-2">
       <div className="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
         <svg
@@ -35,6 +39,15 @@ const Home = () => {
         </div>
       </div>
     </div>
+        </div>
+        <div className="grid gap-5 lg:grid-cols-2 sm:max-w-full sm:mx-auto lg:max-w-full">
+            {
+                qiuzes.data.map(quiz => <Quiz
+                    key={quiz.id}
+                    quiz={quiz}
+                ></Quiz>)
+            }
+        </div>
         </div>
     );
 };
