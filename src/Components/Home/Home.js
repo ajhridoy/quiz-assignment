@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
 import { QuizContext } from '../../Layouts/Main';
 import Quiz from '../Quiz/Quiz';
 
@@ -35,7 +34,7 @@ const Home = () => {
             </span>
           </h2>
           <p className="pr-5 mb-5 text-base text-gray-700 md:text-lg">
-          <span className='text-orange-600'>BlissQuiz</span> is a platform where you can judge yourself by taking some quizzes in a fun way. So, to check yourself, select any of the topics below and take the quiz now..!!
+          <span className='text-orange-600 font-medium'>BlissQuiz</span> is a platform where you can judge yourself by taking some quizzes in a fun way. So, to check yourself, select any of the topics below and take the quiz now..!!
           </p>
         </div>
       </div>

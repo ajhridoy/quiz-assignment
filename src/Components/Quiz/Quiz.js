@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ArrowRightIcon } from '@heroicons/react/24/solid'
 
 const Quiz = ({quiz}) => {
     const {id, logo, name, total} = quiz;
@@ -19,7 +20,7 @@ const Quiz = ({quiz}) => {
             <h2 className='text-2xl font-bold'>{name}</h2>
             <div className='flex justify-around items-center mt-3'>
                 <p className='text-xl font-semibold'>Total Quiz: {total}</p>
-                <button onClick={quizBtnHandler} className='p-3 font-bold tracking-wide rounded-md bg-violet-400 text-gray-900 hover:bg-violet-200'>Start Quiz</button>
+                <button onClick={quizBtnHandler} className='p-3 font-bold tracking-wide rounded-md bg-violet-400 text-gray-900 hover:bg-violet-200 flex'><span>Start Quiz</span> <span><ArrowRightIcon className="h-6 w-6 text-black-500 ml-2"/></span></button>
             </div>
           </div>
         </div>
