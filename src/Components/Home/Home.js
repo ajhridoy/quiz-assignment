@@ -3,8 +3,8 @@ import { useLoaderData } from 'react-router-dom';
 import Quiz from '../Quiz/Quiz';
 
 const Home = () => {
-    const qiuzes = useLoaderData() 
-    console.log(qiuzes);
+    const quizes = useLoaderData().data 
+    // console.log(quizes);
     return (
         <div>
             <div>
@@ -34,7 +34,7 @@ const Home = () => {
             </span>
           </h2>
           <p className="pr-5 mb-5 text-base text-gray-700 md:text-lg">
-          <span className='text-orange-600'>BlisQuiz</span> is a platform where you can judge yourself by taking some quizzes in a fun way. So, to check yourself, select any of the topics below and take the quiz now..!!
+          <span className='text-orange-600'>BlissQuiz</span> is a platform where you can judge yourself by taking some quizzes in a fun way. So, to check yourself, select any of the topics below and take the quiz now..!!
           </p>
         </div>
       </div>
@@ -42,7 +42,7 @@ const Home = () => {
         </div>
         <div className="grid gap-5 lg:grid-cols-2 sm:max-w-full sm:mx-auto lg:max-w-full">
             {
-                qiuzes.data.map(quiz => <Quiz
+                quizes.map(quiz => <Quiz
                     key={quiz.id}
                     quiz={quiz}
                 ></Quiz>)

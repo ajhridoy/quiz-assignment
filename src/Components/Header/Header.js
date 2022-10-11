@@ -7,7 +7,7 @@ const Header = () => {
         <div className="px-4 py-5 mx-auto shadow-md sm:max-w-full md:max-w-full lg:max-w-screen-full md:px-24 lg:px-8 bg-gray-200">
       <div className="relative md:flex items-center justify-between">
         <NavLink
-          to="/"
+          to="/home"
           aria-label="BlissQuiz"
           title="BlissQuiz"
           className="inline-flex items-center"
