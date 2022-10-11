@@ -6,6 +6,7 @@ const Question = ({ques}) => {
     console.log(ques)
     const {correctAnswer, options, question} = ques;
     const optionBtn = (option) => {
+        console.log(option)
         if(correctAnswer === option){
             alert('Right Ans')
         }
