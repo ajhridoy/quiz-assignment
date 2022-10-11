@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import { QuizContext } from '../../Layouts/Main';
 import Quiz from '../Quiz/Quiz';
 
 const Home = () => {
-    const quizes = useLoaderData().data 
+    const quizes = useContext(QuizContext)
     // console.log(quizes);
     return (
         <div>

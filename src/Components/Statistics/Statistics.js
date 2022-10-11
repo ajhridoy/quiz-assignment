@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { QuizContext } from '../../Layouts/Main';
 
 
 const Statistics = () => {
-    const loadData = useLoaderData().data
+    const loadData = useContext(QuizContext)
     console.log(loadData)
     return (
         
