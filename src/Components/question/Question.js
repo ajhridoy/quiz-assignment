@@ -1,21 +1,31 @@
 import React from 'react';
 import Option from '../Option/Option';
 import { EyeIcon } from '@heroicons/react/24/solid'
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const Question = ({ques}) => {
-    console.log(ques)
+    // console.log(ques)
     const {correctAnswer, options, question} = ques;
     const optionBtn = (option) => {
-        console.log(option)
         if(correctAnswer === option){
-            alert('Right Ans')
+            toast.success('Your Ans is Right', {
+                position: "top-center",
+                autoClose: 1000,
+            })
         }
         else{
-            alert('wrong ans')
+            toast.warning('Your Ans is Wrong', {
+                position: "top-center",
+                autoClose: 1000,
+            })
         }
     }
     const eyeBtnHandler = () =>{
-        alert(correctAnswer)
+        toast.info(correctAnswer, {
+            position: "top-center",
+            autoClose: 3000,
+        })
     }
     return (
         <div className='bg-slate-100 w-3/4 mx-auto p-4 my-8 rounded-lg'>
@@ -25,12 +35,14 @@ const Question = ({ques}) => {
             </div>
             <div>
                 {
-                    options.map(option => <Option
+                    options.map((option, index) => <Option
+                        key={index}
                         option={option}
                         optionBtn={optionBtn}
                     ></Option>)
                 }
             </div>
+            <ToastContainer />
         </div>
     );
 };

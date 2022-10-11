@@ -4,7 +4,7 @@ import Question from '../question/Question';
 
 const SingleQuiz = () => {
     const singleQuiz = useLoaderData().data
-    console.log(singleQuiz.questions)
+    console.log(singleQuiz)
     return (
         <div>
             <h2 className='text-xl font-bold my-5'>Quiz of {singleQuiz.name}</h2>

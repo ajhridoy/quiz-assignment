@@ -30,7 +30,7 @@ const Header = () => {
             BlissQuiz
           </span>
         </NavLink>
-        <ul className="md:flex items-center lg:flex">
+        <ul className="md:flex items-center">
           <li>
             <NavLink
               to="/home"
