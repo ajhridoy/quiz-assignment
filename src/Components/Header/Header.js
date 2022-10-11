@@ -1,9 +1,12 @@
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
 
 const Header = () => {
+  const [open, setOpen] = useState(false);
     return (
         <div className="px-4 py-5 mx-auto shadow-md sm:max-w-full md:max-w-full lg:max-w-screen-full md:px-24 lg:px-8 bg-gray-200">
-      <div className="relative md:flex items-center justify-between">
+      <div className="flex items-center justify-between mb-3">
         <NavLink
           to="/home"
           aria-label="BlissQuiz"
@@ -29,7 +32,14 @@ const Header = () => {
             BlissQuiz
           </span>
         </NavLink>
-        <ul className="md:flex items-center">
+        <div>
+        <div onClick={() => setOpen(!open)} className="h-6 w-6 text-gray-500 hover:text-blue-500 ml-4 md:hidden">
+        {
+          open ? <XMarkIcon/> : <Bars3Icon/>
+        }
+        </div>
+        <ul className={`flex  justify-center items-center absolute md:static duration-500 ease-in ${open ? 'right-20 mt-2' : ' hidden md:block md:flex'}`}>
+        
           <li>
             <NavLink
               to="/home"
@@ -61,6 +71,8 @@ const Header = () => {
             </NavLink>
           </li>
         </ul>
+        </div>
+      
       </div>
     </div>
     );
