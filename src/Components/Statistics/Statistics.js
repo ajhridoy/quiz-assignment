@@ -10,13 +10,16 @@ const Statistics = () => {
         
         <div>
             <h2 className='text-xl font-bold mt-4'>This graph shows how many quizzes each topic has!!</h2>
-                 <div className='w-full md:w-2/4 lg:mx-auto my-10'>
-                 <BarChart width={400} height={400} data={loadData}>
+                 <div className='w-full md:w-3/4 mx-auto my-10'>
+                <ResponsiveContainer  width="70%" height={500}>
+                <BarChart width={400} height={400} data={loadData}>
                     <Bar dataKey="total" fill="#8884d8" />
                     <XAxis dataKey="name"></XAxis>
                     <YAxis></YAxis>
                     <Tooltip></Tooltip>
                 </BarChart>
+                </ResponsiveContainer>
+                 
                  </div>
   
         </div>

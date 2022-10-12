@@ -40,6 +40,7 @@ const Home = () => {
       </div>
     </div>
         </div>
+        <h2 className='text-3xl font-bold mt-8'>Quiz Topics</h2>
         <div className="grid gap-5 lg:grid-cols-2 sm:max-w-full sm:mx-auto lg:max-w-full">
             {
                 quizes.map(quiz => <Quiz
